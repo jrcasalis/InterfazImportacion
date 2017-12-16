@@ -16,12 +16,12 @@ namespace ExportarLista.Business
 {
     public class PdfBusiness : IPdfBusiness
     {
-        [Dependency]
-        public IF0413Repository F0413Repository { get; set; }
-        [Dependency]
-        public IF0413Business F0413Business { get; set; }
-        [Dependency]
-        public IF0414Business F0414Business { get; set; }
+        //[Dependency]
+        //public IF0413Repository F0413Repository { get; set; }
+        //[Dependency]
+        //public IF0413Business F0413Business { get; set; }
+        //[Dependency]
+        //public IF0414Business F0414Business { get; set; }
 
         public String BuscarDatosPdf(string nombreArchivo)
         {

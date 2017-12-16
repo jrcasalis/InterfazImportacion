@@ -1,5 +1,4 @@
 ﻿using ExportarLista.Entities;
-using ExportarLista.Entities.E1;
 using System.Data.Entity;
 
 namespace ExportarLista.Data

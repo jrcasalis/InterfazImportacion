@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using ExportarLista.Entities;
-using ExportarLista.Entities.E1;
 
 namespace ExportarLista.Data
 {

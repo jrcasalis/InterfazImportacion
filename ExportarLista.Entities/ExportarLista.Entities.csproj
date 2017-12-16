@@ -53,11 +53,6 @@
     <Compile Include="Configuracion\TipoArchivoSection.cs" />
     <Compile Include="Configuracion\TiposArchivosCollection.cs" />
     <Compile Include="Configuracion\Documento.cs" />
-    <Compile Include="E1\F0101.cs" />
-    <Compile Include="E1\F0111.cs" />
-    <Compile Include="E1\F01151.cs" />
-    <Compile Include="E1\F0413.cs" />
-    <Compile Include="E1\F0414.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Exceptions\ExportException.cs" />
     <Compile Include="ExportDataFormat.cs" />
