@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,8 +24,10 @@ namespace ExportarLista.UI.Views
             container = UnityConfig.RegisterComponents();
             InitializeComponent();
             var appSettings = ConfigurationManager.AppSettings;
-            var bussinesName = string.IsNullOrEmpty(appSettings["bussinesName"]) ? "No encontrado" : appSettings["bussinesName"];
-            Text = bussinesName;
+            var bussinesName = string.IsNullOrEmpty(appSettings["bussinesName"]) ? "Exportador de Excel a txt" : appSettings["bussinesName"];
+
+            Text = bussinesName + "- " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Name
+                        + " - v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             MaximizeBox = false;
             btnExport.Visible = false;
             pgrProgress.Visible = false;
