@@ -43,25 +43,4 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://sunchales36:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ExportarLista.Business\\ExportarLista.Business.csproj
-		SccProjectName1 = ExportarLista.Business
-		SccLocalPath1 = ExportarLista.Business
-		SccProjectUniqueName2 = ExportarLista.Data\\ExportarLista.Data.csproj
-		SccProjectName2 = ExportarLista.Data
-		SccLocalPath2 = ExportarLista.Data
-		SccProjectUniqueName3 = ExportarLista.Entities\\ExportarLista.Entities.csproj
-		SccProjectName3 = ExportarLista.Entities
-		SccLocalPath3 = ExportarLista.Entities
-		SccProjectUniqueName4 = ExportarLista.Services\\ExportarLista.Services.csproj
-		SccProjectName4 = ExportarLista.Services
-		SccLocalPath4 = ExportarLista.Services
-		SccProjectUniqueName5 = ExportarLista.UI\\ExportarLista.UI.csproj
-		SccProjectName5 = ExportarLista.UI
-		SccLocalPath5 = ExportarLista.UI
-	EndGlobalSection
 EndGlobal

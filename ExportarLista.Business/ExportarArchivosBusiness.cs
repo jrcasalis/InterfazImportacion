@@ -59,10 +59,18 @@ namespace ExportarLista.Business
                     String description = xlRange.Cells[i, 2].Value2.ToString().Trim();
                     line.Append(description);
                     line.Append(exportDataFormat.DataSeparator);
-                    line.Append(exportDataFormat.IVA);
-                    line.Append(exportDataFormat.DataSeparator);
-                    line.Append(exportDataFormat.Profit);
-                    line.Append(exportDataFormat.DataSeparator);
+                    //Sólo guarda el IVA si está seteado para que lo haga
+                    if (exportDataFormat.UseIVA)
+                    {
+                        line.Append(exportDataFormat.IVA);
+                        line.Append(exportDataFormat.DataSeparator);
+                    }
+                    //Sólo guarda la ganancia si está seteado para que lo haga
+                    if (exportDataFormat.UseProfit)
+                    {
+                        line.Append(exportDataFormat.Profit);
+                        line.Append(exportDataFormat.DataSeparator);
+                    }
                     String price = xlRange.Cells[i, 4].Value2.ToString().Trim();
                     price = price.Replace(".", "").Replace(",", ".");
                     line.Append(price);

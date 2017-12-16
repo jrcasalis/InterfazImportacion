@@ -29,6 +29,7 @@ namespace ExportarLista.UI.Views
             btnExport.Visible = false;
             pgrProgress.Visible = false;
             pgrProgress.Value = 0;
+            btnNuevo.Visible = false;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -59,6 +60,7 @@ namespace ExportarLista.UI.Views
                         {
                             txtSelectedFile.Text = odfSelectFile.FileName;
                             btnExport.Visible = true;
+                            btnExport.Enabled = true;
                             pgrProgress.Visible = true;
                             selectedFileToProcess = odfSelectFile.FileName;
                         }
@@ -88,34 +90,56 @@ namespace ExportarLista.UI.Views
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            btnSelect.Enabled = false;
+            btnExport.Enabled = false;
+            txtSelectedFile.Enabled = false;
+            btnNuevo.Visible = true;
+            btnNuevo.Enabled = false;
+            ExportListFile();
+
             /*ThreadStart threadDelegate = new ThreadStart(this.ExportListFile);
             Thread newThread = new Thread(threadDelegate);
             newThread.Start();*/
-            ExportListFile();
         }
 
         private void ExportListFile()
         {
             var appSettings = ConfigurationManager.AppSettings;
-            var initialDirectory = string.IsNullOrEmpty(appSettings["initialDirectory"]) ? "No encontrado" : appSettings["initialDirectory"];
+            var initialDirectory = string.IsNullOrEmpty(appSettings["initialDirectory"]) ? @"C:\" : appSettings["initialDirectory"];
 
-            var outputDirectory = string.IsNullOrEmpty(appSettings["outputDirectory"]) ? "No encontrado" : appSettings["outputDirectory"];
+            var outputDirectory = string.IsNullOrEmpty(appSettings["outputDirectory"]) ? @"C:\" : appSettings["outputDirectory"];
 
             var dataSeparator = string.IsNullOrEmpty(appSettings["dataSeparator"]) ? "No encontrado" : appSettings["dataSeparator"];
-            var IVA = string.IsNullOrEmpty(appSettings["IVA"]) ? "No encontrado" : appSettings["IVA"];
-            var profit = string.IsNullOrEmpty(appSettings["profit"]) ? "No encontrado" : appSettings["profit"];
+            var IVA = string.IsNullOrEmpty(appSettings["IVA"]) ? "0" : appSettings["IVA"];
+            var profit = string.IsNullOrEmpty(appSettings["profit"]) ? "0" : appSettings["profit"];
+            var useProfit = Boolean.Parse(string.IsNullOrEmpty(appSettings["useProfit"]) ? "false" : appSettings["useProfit"]);
+            var useIVA = Boolean.Parse(string.IsNullOrEmpty(appSettings["useIVA"]) ? "false" : appSettings["useIVA"]);
 
             ExportDataFormat exportDataFormat = new ExportDataFormat()
             {
                 DataSeparator = dataSeparator,
                 IVA = IVA,
                 Profit = profit,
+                UseIVA = useIVA,
+                UseProfit = useProfit,
                 Form = this
             };
 
             var exportar = new ExportarArchivo();
             exportar.exportarListaPrecio(container, selectedFileToProcess, outputDirectory, exportDataFormat);
+            btnNuevo.Enabled = true;
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            btnSelect.Enabled = true;
+            btnExport.Visible = false;
+            txtSelectedFile.Enabled = true;
+            txtSelectedFile.Text = "";
+            selectedFileToProcess = "";
+            btnNuevo.Visible = false;
+            pgrProgress.Visible = false;
+            pgrProgress.Value = 0;
+        }
     }
 }

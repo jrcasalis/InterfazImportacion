@@ -34,6 +34,7 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.pgrProgress = new System.Windows.Forms.ProgressBar();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSelectedFile
@@ -61,6 +62,7 @@
             // 
             this.btnExport.BackgroundImage = global::ExportarLista.UI.Properties.Resources.Excel2TXT;
             this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExport.Location = new System.Drawing.Point(132, 141);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(319, 144);
@@ -72,6 +74,7 @@
             // 
             this.btnSelect.BackgroundImage = global::ExportarLista.UI.Properties.Resources.search;
             this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSelect.Location = new System.Drawing.Point(521, 87);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(40, 40);
@@ -88,11 +91,23 @@
             this.pgrProgress.Size = new System.Drawing.Size(541, 19);
             this.pgrProgress.TabIndex = 5;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevo.Location = new System.Drawing.Point(386, 360);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(175, 60);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "Nueva Conversión";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 432);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pgrProgress);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.lblSelect);
@@ -113,5 +128,6 @@
         private System.Windows.Forms.Label lblSelect;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.ProgressBar pgrProgress;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }
