@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportarLista.UI", "ExportarLista.UI\ExportarLista.UI.csproj", "{FB4A3DCA-0B7B-460E-A590-ABCFB08107FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportarLista.Entities", "ExportarLista.Entities\ExportarLista.Entities.csproj", "{0B155C76-56A2-490C-A054-5FA50CDC444D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportarLista.Services", "ExportarLista.Services\ExportarLista.Services.csproj", "{242D9867-56B4-4F30-A374-90A134015038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportarLista.Data", "ExportarLista.Data\ExportarLista.Data.csproj", "{80A05808-BE1B-4D8F-99C6-0BC59934B165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportarLista.Business", "ExportarLista.Business\ExportarLista.Business.csproj", "{BD9E5896-AD4A-49F5-8334-1E3581B88D6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB4A3DCA-0B7B-460E-A590-ABCFB08107FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB4A3DCA-0B7B-460E-A590-ABCFB08107FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB4A3DCA-0B7B-460E-A590-ABCFB08107FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB4A3DCA-0B7B-460E-A590-ABCFB08107FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B155C76-56A2-490C-A054-5FA50CDC444D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B155C76-56A2-490C-A054-5FA50CDC444D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B155C76-56A2-490C-A054-5FA50CDC444D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B155C76-56A2-490C-A054-5FA50CDC444D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{242D9867-56B4-4F30-A374-90A134015038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{242D9867-56B4-4F30-A374-90A134015038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{242D9867-56B4-4F30-A374-90A134015038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{242D9867-56B4-4F30-A374-90A134015038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A05808-BE1B-4D8F-99C6-0BC59934B165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A05808-BE1B-4D8F-99C6-0BC59934B165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A05808-BE1B-4D8F-99C6-0BC59934B165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A05808-BE1B-4D8F-99C6-0BC59934B165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9E5896-AD4A-49F5-8334-1E3581B88D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9E5896-AD4A-49F5-8334-1E3581B88D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9E5896-AD4A-49F5-8334-1E3581B88D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9E5896-AD4A-49F5-8334-1E3581B88D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sunchales36:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ExportarLista.Business\\ExportarLista.Business.csproj
+		SccProjectName1 = ExportarLista.Business
+		SccLocalPath1 = ExportarLista.Business
+		SccProjectUniqueName2 = ExportarLista.Data\\ExportarLista.Data.csproj
+		SccProjectName2 = ExportarLista.Data
+		SccLocalPath2 = ExportarLista.Data
+		SccProjectUniqueName3 = ExportarLista.Entities\\ExportarLista.Entities.csproj
+		SccProjectName3 = ExportarLista.Entities
+		SccLocalPath3 = ExportarLista.Entities
+		SccProjectUniqueName4 = ExportarLista.Services\\ExportarLista.Services.csproj
+		SccProjectName4 = ExportarLista.Services
+		SccLocalPath4 = ExportarLista.Services
+		SccProjectUniqueName5 = ExportarLista.UI\\ExportarLista.UI.csproj
+		SccProjectName5 = ExportarLista.UI
+		SccLocalPath5 = ExportarLista.UI
+	EndGlobalSection
+EndGlobal
