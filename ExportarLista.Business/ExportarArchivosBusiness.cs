@@ -45,6 +45,11 @@ namespace ExportarLista.Business
             }
 
             List<String> lines = new List<string>();
+            //Si está configurado para que la primer línea sea blanca, se imprime
+            if (exportDataFormat.FirstLineEmpty)
+            {
+                lines.Add("");
+            }
 
             for (int i = 2; i <= rowCount; i++) //<= 20; i++)//
             {

@@ -12,5 +12,6 @@ namespace ExportarLista.Entities
         public Boolean UseIVA { get; set; }
         public Boolean UseProfit { get; set; }
         public Form Form { get; set; }
+        public Boolean FirstLineEmpty { get; set; }
     }
 }

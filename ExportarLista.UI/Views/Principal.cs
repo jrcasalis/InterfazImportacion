@@ -117,6 +117,7 @@ namespace ExportarLista.UI.Views
             var profit = string.IsNullOrEmpty(appSettings["profit"]) ? "0" : appSettings["profit"];
             var useProfit = Boolean.Parse(string.IsNullOrEmpty(appSettings["useProfit"]) ? "false" : appSettings["useProfit"]);
             var useIVA = Boolean.Parse(string.IsNullOrEmpty(appSettings["useIVA"]) ? "false" : appSettings["useIVA"]);
+            var firstLineEmpty = Boolean.Parse(string.IsNullOrEmpty(appSettings["firstLineEmpty"]) ? "false" : appSettings["firstLineEmpty"]);
 
             ExportDataFormat exportDataFormat = new ExportDataFormat()
             {
@@ -125,7 +126,8 @@ namespace ExportarLista.UI.Views
                 Profit = profit,
                 UseIVA = useIVA,
                 UseProfit = useProfit,
-                Form = this
+                Form = this,
+                FirstLineEmpty = firstLineEmpty
             };
 
             var exportar = new ExportarArchivo();
