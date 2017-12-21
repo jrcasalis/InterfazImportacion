@@ -57,6 +57,7 @@ namespace ExportarLista.Business
                     line.Append(code);
                     line.Append(exportDataFormat.DataSeparator);
                     String description = xlRange.Cells[i, 2].Value2.ToString().Trim();
+                    description = description.Replace(',', '.');
                     line.Append(description);
                     line.Append(exportDataFormat.DataSeparator);
                     //Sólo guarda el IVA si está seteado para que lo haga
@@ -98,8 +99,7 @@ namespace ExportarLista.Business
                 var dateFile = DateTime.Today;
                 var outputFileName = "ListaPrecio_" + dateFile.Year.ToString().PadLeft(2, '0') + dateFile.Month.ToString().PadLeft(2, '0') + dateFile.Day.ToString().PadLeft(2, '0')+ ".txt";
                 outputFileName = outputPath + Path.DirectorySeparatorChar + outputFileName;
-                TextWriter tw = new StreamWriter(outputFileName );
-
+                TextWriter tw = new StreamWriter(outputFileName);
                 foreach (string s in lines)
                     tw.WriteLine(s);
 
